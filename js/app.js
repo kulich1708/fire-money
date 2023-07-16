@@ -11549,7 +11549,7 @@
         }));
         let deadlineMain = new Date(Date.parse(new Date) + 3 * 60 * 60 * 1e3);
         initializeClock("countdown-main", deadlineMain);
-        window.mainPath = "/";
+        window.mainPath = "/fire-money/";
         let windowWidth = document.documentElement.clientWidth;
         window.addEventListener("resize", (() => {
             windowWidth = document.documentElement.clientWidth;
