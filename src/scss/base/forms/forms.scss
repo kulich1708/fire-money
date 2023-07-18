@@ -1,0 +1,251 @@
+//<FORM>
+// Снипет (HTML):
+.form {
+	&__row {
+	}
+	&__column {
+	}
+	&__line {
+	}
+	&__input {
+	}
+	&__button {
+	}
+	&__error {
+		margin: rem(5) rem(0) rem(0) rem(0);
+		color: red;
+	}
+	._form-error {
+		.item-form__title {
+			color: red;
+		}
+		.input._form-error {
+			border: rem(1) solid red;
+		}
+	}
+}
+.form {
+	// .form__main
+	&__main {
+	}
+	// .form__items
+	&__items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		&_20 {
+			gap: rem(12) rem(20);
+		}
+		&_35 {
+			gap: rem(12) rem(35);
+		}
+		&_10 {
+			gap: rem(10);
+		}
+	}
+	.form__main_card {
+		max-width: rem(670);
+		margin: 0 auto;
+		.form__items {
+			align-self: center;
+			&:first-child {
+				flex: 0 1 rem(415);
+				background: #ffffff;
+				border: rem(2) solid #ececec;
+				border-radius: rem(8);
+				padding: rem(20);
+				@media (min-width: $mobile) {
+					padding: rem(20) rem(40) rem(20) rem(20);
+				}
+			}
+			&:last-child {
+				flex: 0 1 rem(250);
+				background: #ffffff;
+				border: rem(2) solid #ececec;
+				padding: rem(40) rem(0);
+				border-radius: rem(8);
+				//align-self: stretch;
+				@media (min-width: $mobile) {
+					border-top-left-radius: none;
+					border-bottom-left-radius: none;
+					border-left: none;
+					padding: rem(40) rem(0) rem(40) rem(5);
+				}
+				.item-form {
+					padding: rem(0) rem(0) rem(0) rem(40);
+				}
+			}
+			@media (max-width: $mobile) {
+				max-width: rem(500);
+				flex: 0 1 100% !important;
+				width: 100%;
+			}
+		}
+		.input {
+			height: rem(35);
+		}
+		.form__line {
+			height: rem(33);
+			width: 100%;
+			margin: rem(0) rem(0) rem(15) rem(0);
+			background: #ececec;
+		}
+	}
+	// .form__item
+	&__item {
+		position: relative;
+	}
+	// .form__bottom
+	&__bottom {
+		padding: rem(0) rem(0) rem(35) rem(0);
+		border-bottom: rem(1) solid #f2f2f2;
+	}
+	// .form__confirm
+	&__confirm {
+		text-align: center;
+		margin: rem(30) rem(0) rem(0) rem(0);
+		padding: rem(40) rem(0) rem(0) rem(0);
+		border-top: rem(1) solid #f2f2f2;
+		@media (min-width: $mobile) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: rem(30);
+		}
+		&_margin_no {
+			margin: 0;
+			border: none;
+		}
+	}
+	// .form__progress
+	&__progress {
+	}
+	// .form__button
+	&__button {
+	}
+	// .form__checkbox
+	&__checkbox {
+		margin: rem(25) rem(0) rem(0) rem(0);
+	}
+	// .form__imageblock
+	&__imageblock {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			display: block;
+		}
+	}
+	// .form__content
+	&__content {
+		display: flex;
+		align-items: center;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			row-gap: rem(15);
+		}
+	}
+	.countdown {
+		margin: rem(25) rem(0) rem(0) rem(0);
+		p {
+			display: inline-block;
+		}
+		a {
+			display: none;
+			text-decoration: underline;
+			color: rgb(85, 136, 178);
+			&._active {
+				display: block;
+			}
+		}
+		&-number {
+			display: none;
+			&._active {
+				display: block;
+			}
+		}
+	}
+}
+.item-form {
+	flex: 0 1 100%;
+	&_16 {
+		flex: 0 1 calc(16.66% - rem(12) * 5 / 6);
+	}
+	&_33 {
+		flex: 0 1 calc(33.33% - (rem(40) / 3));
+		@media (max-width: $mobile) {
+			flex: 0 1 100%;
+		}
+	}
+	&_50 {
+		flex: 0 1 calc(50% - (rem(35) / 2));
+		@media (max-width: $mobile) {
+			flex: 0 1 100%;
+		}
+	}
+	&_min {
+		.input {
+			width: rem(55);
+		}
+	}
+	// .item-form__title
+	&__title {
+		font-weight: 300;
+		font-size: rem(15);
+		line-height: math.div(18, 15);
+		color: #45515f;
+		margin: rem(0) rem(0) rem(8) rem(0);
+		display: flex;
+		align-items: center;
+	}
+	// .item-form__input
+	&__input {
+	}
+	// .item-form_min
+	&_min {
+		.input {
+			display: inline-block;
+			padding: rem(0) rem(10);
+		}
+		span {
+			margin: rem(0) rem(10);
+		}
+	}
+}
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+@import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+@import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";

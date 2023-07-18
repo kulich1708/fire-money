@@ -1,0 +1,94 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	display: block;
+	&:before {
+		@extend %ic;
+		display: block;
+		text-align: center;
+	}
+}
+
+._icon-user:before {
+	content: "\e918";
+}
+._icon-out:before {
+	content: "\e913";
+}
+._icon-report:before {
+	content: "\e914";
+}
+._icon-status:before {
+	content: "\e915";
+}
+._icon-suggestion:before {
+	content: "\e916";
+}
+._icon-time:before {
+	content: "\e917";
+}
+._icon-arrow:before {
+	content: "\e900";
+}
+._icon-calendar:before {
+	content: "\e901";
+}
+._icon-cart:before {
+	content: "\e902";
+}
+._icon-check-mark:before {
+	content: "\e903";
+}
+._icon-DOB:before {
+	content: "\e904";
+}
+._icon-download:before {
+	content: "\e905";
+}
+._icon-facebook:before {
+	content: "\e906";
+}
+._icon-get-money-1:before {
+	content: "\e907";
+}
+._icon-get-money-2:before {
+	content: "\e908";
+}
+._icon-get-money-3:before {
+	content: "\e909";
+}
+._icon-get-money-4:before {
+	content: "\e90a";
+}
+._icon-insta:before {
+	content: "\e90b";
+}
+._icon-location:before {
+	content: "\e90c";
+}
+._icon-long-arrow:before {
+	content: "\e90d";
+}
+._icon-mail:before {
+	content: "\e90e";
+}
+._icon-phone:before {
+	content: "\e90f";
+}
+._icon-rating:before {
+	content: "\e910";
+}
+._icon-x:before {
+	content: "\e911";
+}
+._icon-youtube:before {
+	content: "\e912";
+}
