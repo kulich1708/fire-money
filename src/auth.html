@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"вход в аккаунт"
+})
+
+<body>
+	<div class="wrapper wrapper_header_litle">
+		<main class="page auth">
+			<div class="auth__content content-auth">
+				<div class="content-auth__container">
+					<a href="index.html" class="auth__logo">Fire <span>Money</span></a>
+					<div class="auth__title">АВТОРИЗАЦИЯ</div>
+					<form name="" action="" method="post" data-href="cabinet.html" class="auth__form form" data-dev>
+						<div class="form__items">
+							<div class="form__item item-form">
+								<div class="item-form__title">Телефон</div>
+								<div class="item-form__input-wrap input-wrap input-wrap_padding"><i
+										class="_icon-phone"></i><input autocomplete="off" data-validate data-required
+										type="tel" name="phone" data-error="Ошибка" placeholder=""
+										class="item-form__input input" value=""></div>
+							</div>
+							<div class="form__item item-form">
+								<div class="item-form__title">Фамилия</div>
+								<div class="item-form__input-wrap input-wrap input-wrap_padding"><i
+										class="_icon-user"></i><input autocomplete="off" data-validate data-required
+										type="text" name="lastname" data-error="Ошибка" placeholder=""
+										class="item-form__input input" value=""></div>
+							</div>
+						</div>
+						<button class="button form__button">НАЙТИ ЗАЯВКИ</button>
+					</form>
+
+					<div class="auth__info info-auth">
+						<a href="tel:88008080080" class="info-auth__item info-auth__phone"><i
+								class="info-auth__icon _icon-phone"></i><span class="">8 800 808-00-80</span></a>
+						<a href="mailto:Kustohelp@gmail.com" class="info-auth__item"><i
+								class="info-auth__icon _icon-mail"></i><span>Kustohelp@gmail.com</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="auth__bottom bottom-auth">
+				<div class="bottom-auth__container">
+					<p>В случае невозвращения в условленный срок суммы кредита или суммы процентов за пользование
+						заёмными средствами кредитор вынуждено начислит штраф за просрочку платежа. Большинство
+						кредиторов идут на уступки и дают 3 дополнительных рабочих дня для оплаты. Они предусмотрены на
+						случай, к примеру, если банковский перевод занял больше времени, чем обычно. Однако, в случае
+						неполучения от Вас какой-либо реакции в течение продолжительного времени, будет начислен штраф
+						за просрочку срока погашения размером в среднем 0,10% от первоначальной суммы для займов, 0,03%
+						от суммы задолженности в среднем для потребительских кредитов и кредитных карт. При несоблюдении
+						Вами условий по погашению кредитов и займов, данные о Вас могут быть переданы в реестр должников
+						или БКИ, что негативно может сказаться на Вашей кредитной истории и рейтинге кредитоспособности.
+						Рекомендуем Вам вносить платеж в день получения данных напоминаний. Погашая задолженность в
+						срок, Вы формируете хорошую кредитную историю, что повышает Ваш рейтинг кредитоспособности и
+						шансы в дальнейшем получить кредит на более выгодных условиях.</p>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

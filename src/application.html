@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Оформление заявки"
+})
+
+<body>
+	<div class="wrapper application">
+		@@include('html/_header-application.htm',{})
+		<main class="page">
+			<div class="page__slider swiper">
+				<div class="page__wrapper swiper-wrapper">
+					<div class="page__slide swiper-slide">
+						<section class="page__section content">
+							<div class="content__container">
+								<div class="content__title"> Для получения займа под 0%* <span>заполните заявку</span>
+								</div>
+								<div class="content__body">
+									<div class="content__top top-content">
+										<div class="top-content__info">Поторопитесь, до окончания акционного предложения
+											осталось</div>
+										<div class="top-content__body">
+											<div id="countdown-main" class="countdown">
+												<div class="hours countdown__item item-countdown" data-span>
+													<div class="item-countdown__content">
+														<span></span><span></span>
+														<p>:</p>
+													</div>
+													<div class="item-countdown__subtitle">Часа</div>
+												</div>
+												<div class="minutes countdown__item" data-span>
+													<div class="item-countdown__content">
+														<span></span><span></span>
+														<p>:</>
+													</div>
+													<div class="item-countdown__subtitle">Минут</div>
+												</div>
+												<div class="seconds countdown__item" data-span>
+													<div class="item-countdown__content">
+														<span></span><span></span>
+													</div>
+													<div class="item-countdown__subtitle">Секунд</div>
+												</div>
+											</div>
+										</div>
+										<div class="top-content__slider"></div>
+									</div>
+									<form method="POST" action="#" class="content__form form" data-dev data-no-validate>
+										<div class="content-header__column credit">
+											<div class="credit__inner">
+												<div class="credit__items">
+													<div class="credit__item item-credit">
+														<div class="item-credit__title">Cумма кредита</div>
+														<div class="item-credit__content">
+															<div class="item-credit__slide" id="sum">
+															</div>
+														</div>
+													</div>
+													<div class="credit__item item-credit">
+														<div class="item-credit__title">Cрок кредита</div>
+														<div class="item-credit__content">
+															<div class="item-credit__slide" id="term">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="credit__info info-credit">
+													<div class="info-credit__item info-credit__item_sum">
+														<div class="info-credit__label">Вы берете</div>
+														<div class="info-credit__value"></div>
+													</div>
+													<div class="info-credit__item info-credit__item_return">
+														<div class="info-credit__label">К возврату</div>
+														<div class="info-credit__value"></div>
+													</div>
+													<div class="info-credit__item info-credit__item_date-return">
+														<div class="info-credit__label">Дата возврата</div>
+														<div class="info-credit__value"></div>
+													</div>
+													<div class="info-credit__item">
+														<div class="info-credit__label">Ежемесячный платеж</div>
+														<div class="info-credit__value">5 650 ₽</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form__main">
+											<div class="form__items form__items_20">
+												<div class="form__item item-form item-form_33">
+													<div class="item-form__title">Фамилия</div>
+													<div class="item-form__input-wrap input-wrap"><input
+															autocomplete="off" data-validate data-required type="text"
+															name="lastname" data-error="Ошибка" placeholder=""
+															class="item-form__input input"></div>
+												</div>
+												<div class="form__item item-form item-form_33">
+													<div class="item-form__title">Имя</div>
+													<div class="item-form__input-wrap input-wrap"><input
+															autocomplete="off" type="text" data-validate data-required
+															name="firstname" data-error="Ошибка" placeholder=""
+															class="item-form__input input"></div>
+												</div>
+												<div class="form__item item-form item-form_33">
+													<div class="item-form__title">Отчество</div>
+													<div class="item-form__input-wrap input-wrap"><input
+															autocomplete="off" type="text" name="patronymic"
+															data-error="Ошибка" placeholder=""
+															class="item-form__input input"></div>
+												</div>
+												<div class="form__item item-form item-form_33">
+													<div class="item-form__title">Телефон</div>
+													<div class="item-form__input-wrap input-wrap input-wrap_padding">
+														<input autocomplete="off" data-validate data-required type="tel"
+															name="phone" data-error="Ошибка" placeholder=""
+															class="item-form__input input"><i class="_icon-phone"></i>
+													</div>
+												</div>
+												<div class="form__item item-form item-form_33">
+													<div class="item-form__title">Дата рождения</div>
+													<div class="item-form__input-wrap input-wrap input-wrap_padding"><i
+															class="_icon-DOB"></i><input autocomplete="off"
+															data-validate data-required type="date" name="DOB"
+															data-error="Ошибка" placeholder=""
+															class="item-form__input input"></div>
+												</div>
+												<div class="form__item item-form item-form_33">
+													<div class="item-form__title">Город</div>
+													<div class="item-form__input-wrap input-wrap">
+														<img src="img/icons/city.svg" alt="Город"></img>
+														<select name="sity" class="form" data-required>
+															<option value="1">Москва</option>
+															<option value="2">Санкт-петербург</option>
+															<option value="3">Челябинск</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form__bottom">
+												<div class="form__checkbox checkbox">
+													<input id="a_1" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name="consent" data-required>
+													<label for="a_1" class="checkbox__label"><span
+															class="checkbox__text">Заполняя заявку на сайте вы даете
+															согласие со следующими условиями: <a href="">Политика
+																обработки персональных данных</a> , <a href="">Публичная
+																оферта и действующие тарифы</a> , <a href="">Согласие на
+																обработку персональных данных</a> ,<a href="">
+																Соглашение с подпиской и Соглашение о хранении учетных
+																данных владельца карт</a>. Стоимость услуги четыреста
+															девяносто шесть руб. Списание производится раз в 5 дней.
+															Настоящим подтверждаю, что не являюсь получателем
+															единовременных и/или регулярных денежных выплат,
+															предусмотренных Указами Президента РФ. </span></label>
+												</div>
+											</div>
+										</div>
+										<div class="form__confirm form__confirm_margin_no">
+											<div class="form__progress progress-form">
+												<div class="progress-form__text">Шаг <span></span> из <span></span>
+												</div>
+												<div class="progress-form__slider slider-progress">
+													<div class="slider-progress__top">
+														<div class="slider-progress__content"></div>
+													</div>
+													<div class="slider-progress__bottom">+<span></span> % к одобрению
+														при заполнении этой формы</div>
+												</div>
+											</div>
+											<button
+												class="form__button form__button-sliders button form__button">Продолжить</button>
+
+										</div>
+									</form>
+								</div>
+							</div>
+						</section>
+						<section class="page__section money">
+							<div class="money__container">
+								<div class="money__column content-money">
+									<div class="content-money__title title">Получи деньги здесь и сейчас</div>
+									<div class="content-money__subtitle">Без проверки кредитной истории. <br> От 1 000 ₽
+										за 15 минут.</div>
+									<a href="application.html" class="content-money__button button">Оформить заявку</a>
+								</div>
+								<div class="money__column imageblock-money">
+									<div class="imageblock-money__inner"><img src="img/money/woman.png" alt="девушка">
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="page__slide swiper-slide">
+						<section class="page__section content">
+							<div class="content__container">
+								<div class="content__body">
+									<div class="content__top top-content">
+										<div class="top-content__title">Ваша анкета сформирована</div>
+										<div class="top-content__info">Вероятность одобрения <span></spa>
+										</div>
+										<div class="top-content__slider"></div>
+									</div>
+									<form method="POST" action="#" class="content__form form" data-dev>
+										<div class="form__main">
+											<div data-spollers class="spollers">
+												<div class="spollers__item">
+													<button type="button" data-spoller
+														class="spollers__title title-spollers"><span>Добавить
+															паспорт</span>
+														<div class="title-spollers__info">
+															<div class="title-spollers__content">
+																<div class="title-spollers__type">Обяз.</div>
+																<div class="title-spollers__progress"></div>
+															</div>
+															<div class="title-spollers__icon">
+																<i class="_icon-arrow"></i>
+															</div>
+														</div>
+													</button>
+													<div class="spollers__body">
+														<div class="form__items form__items_35">
+															<div class="form__item item-form item-form_50">
+																<div class="item-form__title">Серия </div>
+																<div class="item-form__input-wrap input-wrap"><input
+																		data-dont-remember minlength="4" maxlength="4"
+																		autocomplete="off" data-validate data-required
+																		type="tel" name="passportSeries"
+																		data-error="Ошибка" placeholder=""
+																		class="item-form__input input"></div>
+															</div>
+															<div class="form__item item-form item-form_50">
+																<div class="item-form__title">Номер</div>
+																<div class="item-form__input-wrap input-wrap"><input
+																		data-dont-remember minlength="6" maxlength="6"
+																		autocomplete="off" type="tel" data-validate
+																		data-required name="passportID"
+																		data-error="Ошибка" placeholder=""
+																		class="item-form__input input"></div>
+															</div>
+															<div class="form__item item-form">
+																<div class="item-form__title">Место рождения</div>
+																<div class="item-form__input-wrap input-wrap"><input
+																		data-dont-remember autocomplete="off"
+																		type="text" name="birthPlace" data-validate
+																		data-required data-error="Ошибка" placeholder=""
+																		class="item-form__input input"></div>
+															</div>
+															<div class="form__item item-form">
+																<div class="item-form__title">Дата выдачи</div>
+																<div class="item-form__input-wrap input-wrap"><input
+																		data-dont-remember autocomplete="off"
+																		data-validate data-required type="date"
+																		name="issueDate" data-error="Ошибка"
+																		placeholder="" class="item-form__input input">
+																</div>
+															</div>
+															<div class="form__item item-form">
+																<div class="item-form__title">Код подразделения </div>
+																<div class="item-form__input-wrap input-wrap"><input
+																		data-dont-remember autocomplete="off"
+																		data-validate data-required type="text"
+																		name="divisionCode" data-error="Ошибка"
+																		placeholder="" class="item-form__input input">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="spollers__item">
+													<button type="button" data-spoller
+														class="spollers__title title-spollers"><span>Добавить
+															прописку</span>
+														<div class="title-spollers__info">
+															<div class="title-spollers__content">
+																<div class="title-spollers__type">Обяз.</div>
+																<div class="title-spollers__progress"></div>
+															</div>
+															<div class="title-spollers__icon">
+																<i class="_icon-arrow"></i>
+															</div>
+														</div>
+													</button>
+													<div class="spollers__body">
+														<div class="form__items">
+															<div class="form__item item-form">
+																<div class="item-form__title">Адрес прописки</div>
+																<div class="item-form__input-wrap input-wrap"><input
+																		autocomplete="off" data-validate data-required
+																		type="text" name="residencePlace"
+																		data-error="Ошибка" placeholder=""
+																		class="item-form__input input"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="spollers__item">
+													<button type="button" data-spoller
+														class="spollers__title title-spollers"><span>Добавить
+															снилс</span>
+														<div class="title-spollers__info">
+															<div class="title-spollers__content">
+																<div class="title-spollers__type">Обяз.</div>
+																<div class="title-spollers__progress"></div>
+															</div>
+															<div class="title-spollers__icon">
+																<i class="_icon-arrow"></i>
+															</div>
+														</div>
+													</button>
+													<div class="spollers__body">
+														<div class="form__items">
+															<div class="form__item item-form">
+																<div class="item-form__title">снилс</div>
+																<div class="item-form__input-wrap input-wrap"><input
+																		autocomplete="off" data-validate data-required
+																		type="tel" name="snils" data-error="Ошибка"
+																		placeholder="" class="item-form__input input">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="spollers__item">
+													<button type="button" data-spoller
+														class="spollers__title title-spollers"><span>Добавить
+															e-mail</span>
+														<div class="title-spollers__info">
+															<div class="title-spollers__content">
+																<div class="title-spollers__type">Обяз.</div>
+																<div class="title-spollers__progress"></div>
+															</div>
+															<div class="title-spollers__icon">
+																<i class="_icon-arrow"></i>
+															</div>
+														</div>
+													</button>
+													<div class="spollers__body">
+														<div class="form__items">
+															<div class="form__item item-form">
+																<div class="item-form__title">e-mail</div>
+																<div class="item-form__input-wrap input-wrap"><input
+																		autocomplete="off" data-validate
+																		data-required="email" type="text" name="email"
+																		data-error="Ошибка" placeholder=""
+																		class="item-form__input input"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form__confirm form__confirm_margin_no">
+											<div class="form__progress progress-form">
+												<div class="progress-form__text">Шаг <span></span> из <span></span>
+												</div>
+												<div class="progress-form__slider slider-progress">
+													<div class="slider-progress__top">
+														<div class="slider-progress__content"></div>
+													</div>
+													<div class="slider-progress__bottom">+<span></span> % к одобрению
+														при заполнении этой формы</div>
+												</div>
+											</div>
+											<button class="form__button form__button-slider button">Продолжить</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="page__slide swiper-slide">
+						<section class="page__section content">
+							<div class="content__container">
+								<div class="content__body content__body_min-width content__body_border">
+									<div class="content__top top-content">
+										<div class="top-content__title"><span class="user-lastname"></span> <span
+												class="user-firstname"></span> <span class="user-patronymic"></span>
+										</div>
+										<div class="top-content__subtitle">Мы проверяем введенные вами данные </div>
+										<div class="top-content__info">Наши алгоритмы проверяют информацию введенную
+											вами на предыдущих формах, это займет не более минуты. Пожалуйста не
+											закрывайте страницу.
+										</div>
+										<div class="top-content__slider"></div>
+									</div>
+									<div class="form__inner">
+										<div class="form__main">
+											<div class="form__imageblock"><img src="img/applicaton/man.png"
+													alt="Мужчина"></div>
+										</div>
+										<div class="form__confirm">
+											<div class="form__progress progress-form">
+												<div class="progress-form__text">Шаг <span></span> из <span></span>
+												</div>
+												<div class="progress-form__slider slider-progress">
+													<div class="slider-progress__top">
+														<div class="slider-progress__content"></div>
+													</div>
+													<div class="slider-progress__bottom">+<span></span> % к одобрению
+														при заполнении этой формы</div>
+												</div>
+											</div>
+											<button data-timeout="5000" data-from-slider
+												class="form__button form__button-slider button form__button-slider_next">Продолжить</button>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="page__slide swiper-slide">
+						<section class="page__section content">
+							<div class="content__container">
+								<div class="content__body content__body_border">
+									<div class="content__top top-content">
+										<div class="top-content__title top-content__title_name"></div>
+										<div class="top-content__subtitle top-content__subtitle_min">Ваша заявка
+											отправлена </div>
+										<div class="top-content__slider"></div>
+										<div class="top-content__text"><span>Необходимо активировать сервис. Для
+												продолжения вам необходимо активировать подписку. Укажите реквизиты
+												вашей карты.</span></div>
+										<div class="top-content__info top-content__info_background">
+											<p>Внимание! С вашей карты будет удержана сумма в 1 рубль для привязки карты
+												и дальнейшей оплаты услуг. Услуга обработки заявки платная и составляет
+												99 до 303 руб. раз в 5 дней* </p>
+										</div>
+										<div
+											class="top-content__subtitle top-content__subtitle_min top-content__subtitle_margin">
+											Безопасная оплата банковской картой</div>
+									</div>
+									<form method="POST" action="#" class="content__form form" data-dev>
+										<div class="form__main form__main_card">
+											<div class="form__content">
+												<div class="form__items">
+													<div class="form__item item-form">
+														<div class="item-form__title">Номер карты</div>
+														<div
+															class="item-form__input-wrap input-wrap input-wrap_padding">
+															<i class="_icon-cart"></i>
+															<input autocomplete="off" data-validate data-required
+																type="tel" name="cardID" data-error="Ошибка"
+																placeholder="" minlength="16" maxlength="16"
+																class="item-form__input input">
+															<j class="tippy"
+																data-tippy-content="16-значный код на карте">?</j>
+														</div>
+													</div>
+													<div class="form__item item-form item-form_min">
+														<div class="item-form__title">Срок действия</div>
+														<div class="item-form__input-wrap input-wrap">
+															<input autocomplete="off" type="tel" data-validate
+																data-required name="validityMonth" data-error="Ошибка"
+																placeholder="" maxlength="2" minlength="2"
+																class="item-form__input input">
+															<span>/</span>
+															<input autocomplete="off" type="tel" data-validate
+																data-required name="validityYears" data-error="Ошибка"
+																placeholder="" maxlength="2" minlength="2"
+																class="item-form__input input">
+															<j class="tippy" data-tippy-content="Срок действия карты">?
+															</j>
+														</div>
+													</div>
+													<div class="form__item item-form">
+														<div class="item-form__title">Имя владельца </div>
+														<div class="item-form__input-wrap input-wrap">
+															<input autocomplete="off" type="text" name="cardholdersName"
+																data-validate data-required data-error="Ошибка"
+																placeholder="" class="item-form__input input">
+															<j class="tippy"
+																data-tippy-content="Имя указанное на карте">?</j>
+														</div>
+													</div>
+												</div>
+												<div class="form__items">
+													<div class="form__line"></div>
+													<div class="form__item item-form item-form_min">
+														<div class="item-form__title">CVC/CVV</div>
+														<div class="item-form__input-wrap input-wrap">
+															<input data-dont-remember autocomplete="off" data-validate
+																data-required maxlength="3" minlength="3" type="tel"
+																name="cvc" data-error="Ошибка" placeholder=""
+																class="item-form__input input">
+															<j class="tippy"
+																data-tippy-content="CVC/CVV код указанный на обороте карты">
+																?</j>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form__confirm">
+											<div class="form__progress progress-form">
+												<div class="progress-form__text">Шаг <span></span> из <span></span>
+												</div>
+												<div class="progress-form__slider slider-progress">
+													<div class="slider-progress__top">
+														<div class="slider-progress__content"></div>
+													</div>
+													<div class="slider-progress__bottom">+<span></span> % к одобрению
+														при заполнении этой формы</div>
+												</div>
+											</div>
+											<button class="form__button form__button-slider button">Продолжить</button>
+
+										</div>
+									</form>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="page__slide swiper-slide">
+						<section class="page__section content">
+							<div class="content__container">
+								<div
+									class="content__body content__body_border content__body_min-width content__body_SMS">
+									<div class="content__top top-content">
+										<div class="top-content__title">Введите код подтверждения из SMS</div>
+										<div class="top-content__slider"></div>
+									</div>
+									<form method="POST" action="#" class="content__form form" data-dev>
+										<div class="form__main">
+											<div class="form__items">
+												<div class="form__item item-form">
+													<div class="item-form__input-wrap input-wrap">
+														<input data-dont-remember autocomplete="off" data-validate
+															data-required type="tel" name="confirmCode"
+															data-error="Ошибка" placeholder="Код подтверждения из SMS"
+															class="item-form__input input">
+													</div>
+												</div>
+											</div>
+											<div id="countdown" class="countdown top-content__info">
+												<div class="countdown-number _active">
+													<p class="countdown-text">Запросить код повторно можно через </p>
+													<p class="seconds countdown-time"></p>
+													<p class="countdown-text"> сек.</p>
+												</div>
+												<a href="">Отправить код повторно</a>
+											</div>
+										</div>
+										<div class="form__confirm">
+											<div class="form__progress progress-form">
+												<div class="progress-form__text">Шаг <span></span> из <span></span>
+												</div>
+												<div class="progress-form__slider slider-progress">
+													<div class="slider-progress__top">
+														<div class="slider-progress__content"></div>
+													</div>
+													<div class="slider-progress__bottom">+<span></span> % к одобрению
+														при заполнении этой формы</div>
+												</div>
+											</div>
+											<button class="form__button form__button-slider button">Продолжить</button>
+
+										</div>
+									</form>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="page__slide swiper-slide">
+						<section class="page__section content">
+							<div class="content__container">
+								<div class="content__body content__body_border content__body_SMS">
+									<div class="content__top top-content">
+										<div class="top-content__title"><span class="user-lastname"></span> <span
+												class="user-firstname"></span> <span class="user-patronymic"></span>
+										</div>
+										<div class="top-content__subtitle">Выберете МФО в которых вы оставляли заявку за
+											все время.</div>
+										<div class="top-content__slider"></div>
+										<div class="top-content__text">Это увеличит шанс получения займа многократно, а
+											мы подберем лучшие условия.</div>
+									</div>
+									<form method="POST" action="#" class="content__form form" data-dev>
+										<div class="form__main">
+											<div class="form__items form__items_10">
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_0" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_0" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_1" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_1" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_2" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_2" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_3" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_3" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_4" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_4" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_5" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_5" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_6" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_6" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_7" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_7" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_8" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_8" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_9" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_9" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_10" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_10" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_11" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_11" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_12" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_12" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_13" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_13" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_14" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_14" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_15" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_15" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_16" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_16" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+												<div class="form__item item-form item-form_16 checkbox">
+													<input id="c_17" data-error="Ошибка" class="checkbox__input"
+														type="checkbox" value="1" name=>
+													<label for="c_17" class="checkbox__label">
+														<div class="checkbox__top">
+															<img src="img/bank/01.png" alt="bank">
+															<span>WEBBANKIR</span>
+														</div>
+														<div class="checkbox__bottom">
+															<span>WEBBANKIR</span>
+														</div>
+													</label>
+												</div>
+											</div>
+											<div class="ways-get">
+												<div class="ways-get__container">
+													<div class="ways-get__title title">Способы получения</div>
+													<div class="ways-get__items">
+														<div class="ways-get__item item-ways-get">
+															<div class="item-ways-get__image"><img
+																	src="img/receiving/01.png" alt="яндекс.деньги">
+															</div>
+															<div class="item-ways-get__arrow _icon-long-arrow"></div>
+														</div>
+														<div class="ways-get__item item-ways-get">
+															<div class="item-ways-get__image"><img
+																	src="img/receiving/02.png" alt="киви"></div>
+															<div class="item-ways-get__arrow _icon-long-arrow"></div>
+														</div>
+														<div class="ways-get__item item-ways-get">
+															<div class="item-ways-get__image"><img
+																	src="img/receiving/03.png" alt="виза"></div>
+															<div class="item-ways-get__arrow _icon-long-arrow"></div>
+														</div>
+														<div class="ways-get__item item-ways-get">
+															<div class="item-ways-get__image"><img
+																	src="img/receiving/04.png" alt="мастеркард"></div>
+															<div class="item-ways-get__arrow _icon-long-arrow"></div>
+														</div>
+														<div class="ways-get__item item-ways-get">
+															<div class="item-ways-get__image"><img
+																	src="img/receiving/05.png" alt="доллары"></div>
+															<div class="item-ways-get__arrow _icon-long-arrow"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form__confirm">
+											<div class="form__progress progress-form">
+												<div class="progress-form__text">Шаг <span></span> из <span></span>
+												</div>
+												<div class="progress-form__slider slider-progress">
+													<div class="slider-progress__top">
+														<div class="slider-progress__content"></div>
+													</div>
+													<div class="slider-progress__bottom">+<span></span> % к одобрению
+														при заполнении этой формы</div>
+												</div>
+											</div>
+											<button class="form__button button form__button-slider">Продолжить</button>
+
+										</div>
+									</form>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="page__slide swiper-slide">
+						<section class="page__section content">
+							<div class="content__container">
+								<div class="content__body content__body_min-width content__body_border">
+									<div class="content__top top-content">
+										<div class="top-content__title top-content__title_name"></div>
+										<div class="top-content__subtitle">Мы проверяем введенные вами данные </div>
+										<div class="top-content__info">Наши алгоритмы проверяют информацию введенную
+											вами на предыдущих формах, это займет не более минуты. Пожалуйста не
+											закрывайте страницу.
+										</div>
+										<div class="top-content__slider"></div>
+									</div>
+									<div class="form__inner">
+										<div class="form__main">
+											<div class="form__imageblock"><img src="img/applicaton/man.png"
+													alt="Мужчина"></div>
+										</div>
+										<div class="form__confirm">
+											<div class="form__progress progress-form">
+												<div class="progress-form__text">Шаг <span></span> из <span></span>
+												</div>
+												<div class="progress-form__slider slider-progress">
+													<div class="slider-progress__top">
+														<div class="slider-progress__content"></div>
+													</div>
+													<div class="slider-progress__bottom">+<span></span> % к одобрению
+														при заполнении этой формы</div>
+												</div>
+											</div>
+											<a href="approval.html" data-from-slider data-timeout="5000"
+												class="form__button button form__button-slider">Продолжить</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer-application.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+	<script>
+		function testJump(x) {
+			let allInputs = document.querySelectorAll('.swiper-slide')[currentSlideIndex].querySelectorAll('.input');
+			if (x) {
+				var ml = ~~x.getAttribute('maxlength');
+				if (ml && x.value.length >= ml) {
+					let currentInputIndex
+					for (let i = 0; i < allInputs.length; i++) {
+						const input = allInputs[i];
+						if (input == x) currentInputIndex = i
+					}
+					if (currentInputIndex + 1 != allInputs.length) allInputs[currentInputIndex + 1].focus()
+				}
+			}
+		}
+	</script>
+</body>
+
+</html>
